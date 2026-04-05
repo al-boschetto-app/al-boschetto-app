@@ -1,11 +1,17 @@
-import "@/App.css";
+import React from "react";
+import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Toaster } from "@/components/ui/sonner";
-import HomePage from "@/pages/HomePage";
-import MenuPage from "@/pages/MenuPage";
-import AssistancePage from "@/pages/AssistancePage";
-import AdminPage from "@/pages/AdminPage";
-import AdminLoginPage from "@/pages/AdminLoginPage";
+
+// Importiamo i componenti direttamente dalla cartella src dove si trovano ora
+import HomePage from "./HomePage";
+import MenuPage from "./MenuPage";
+import AssistancePage from "./AssistancePage";
+import AdminPage from "./AdminPage";
+import AdminLoginPage from "./AdminLoginPage";
+
+// Se hai installato la libreria 'sonner' per i messaggi di conferma (Toaster), 
+// queste righe funzioneranno. Se danno errore, metti // davanti per disattivarle.
+import { Toaster } from "sonner"; 
 
 function App() {
   return (
@@ -19,6 +25,7 @@ function App() {
           <Route path="/admin/login" element={<AdminLoginPage />} />
         </Routes>
       </BrowserRouter>
+      {/* Il Toaster mostra i messaggi di successo/errore */}
       <Toaster position="top-center" richColors />
     </div>
   );
