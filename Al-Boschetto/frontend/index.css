@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #F5F5DC;
+}
+
+.font-serif {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.font-sans {
+    font-family: 'Outfit', sans-serif;
+}
+
+@layer base {
+    :root {
+        --background: 60 56% 91%;
+        --foreground: 24 10% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 24 10% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 24 10% 10%;
+        --primary: 120 61% 34%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 30 59% 36%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 60 56% 85%;
+        --muted-foreground: 24 10% 40%;
+        --accent: 30 59% 36%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 24 10% 85%;
+        --input: 24 10% 85%;
+        --ring: 120 61% 34%;
+        --radius: 1rem;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.mobile-container {
+    width: 100%;
+    max-width: 448px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+
